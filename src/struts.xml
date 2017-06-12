@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+ 	<package name="login" extends="struts-default" namespace="/login">
+		<action name="loginAction" class="action.LoginAction">
+			<result name="success">/main.jsp</result>
+			<result name="fail">/login.jsp</result>
+			<result name="move">/register.jsp</result>
+		</action>
+	</package>
+	<package name="register" extends="struts-default" namespace="/register">
+		<action name="registerAction" class="action.RegisterAction">
+			<result name="success">/login.jsp</result>
+			<result name="fail">/register.jsp</result>
+		</action>
+	</package>
+	<package name="main" extends="struts-default" namespace="/main">
+		<action name="mainAction" class="action.MainAction">
+			<result name="successmove2editor">/editor.jsp</result>
+			<result name="failmove2editor">/main.jsp</result>
+			<result name="successmove2login">/login.jsp</result>
+			<result name="failmove2login">/main.jsp</result>
+		</action>
+	</package>
+	<package name="info" extends="struts-default" namespace="/info">
+		<action name="infoAction" class="action.InfoAction">
+			<result name="success">/main.jsp</result>
+			<result name="fail">/editor.jsp</result>
+		</action>
+	</package>
+	
+
+</struts>    
